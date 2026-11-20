@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Météo par ville</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main class="main-container">
+    <h1>Météo par ville</h1>
+    <form id="recherche">
+      <label class="sr-only" for="ville">Nom de la ville</label>
+      <div class="search-bar">
+        <input class="search-input" id="ville" type="search" value="Tata" placeholder="Rechercher une ville" minlength="2" required>
+        <button class="search-icon" type="submit" aria-label="Rechercher" title="Rechercher"><span aria-hidden="true">⌕</span></button>
+      </div>
+    </form>
+    <p id="message" role="status"></p>
+    <section id="meteo" class="weather-container" hidden>
+      <span class="weather-icon" id="icone" aria-hidden="true"></span>
+      <strong class="temperature" id="temperature"></strong>
+      <h2 class="city-name" id="nom"></h2>
+      <dl class="weather-info">
+        <div class="humidity"><dt>Humidité</dt><dd id="humidite"></dd></div>
+        <div class="wind-speed"><dt>Vent</dt><dd id="vent"></dd></div>
+      </dl>
+    </section>
+    <footer>Données météo par <a href="https://open-meteo.com/">Open-Meteo</a></footer>
+  </main>
+</body>
+</html>
